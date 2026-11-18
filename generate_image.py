@@ -47,10 +47,10 @@ def wrap(draw, text, fnt, width):
 
 # (tag, tag colour, headline, summary, icon)
 STORIES = [
-    ("EUROPE · WAR", (178, 34, 34),
+    ("EUROPE \u00b7 WAR", (178, 34, 34),
      "Ukraine hits Crimea bridge again",
      "Kyiv says its strike collapsed part of the Kerch bridge for a second "
-     "day. Russia hit Kyiv’s river bridges too.",
+     "day. Russia hit Kyiv\u2019s river bridges too.",
      "bridge"),
     ("MIDDLE EAST", (176, 106, 0),
      "Iran fires drones at US radar in Bahrain",
@@ -67,7 +67,7 @@ STORIES = [
      "Tokyo says two suspected Russian aircraft violated its airspace early "
      "in the morning and protested strongly.",
      "jet"),
-    ("EUROPE · POLICY", (106, 76, 147),
+    ("EUROPE \u00b7 POLICY", (106, 76, 147),
      "UK sanctions West Bank builders",
      "London sanctions eight Israeli construction firms and a group that "
      "blocks aid deliveries to Gaza.",
@@ -133,7 +133,7 @@ def main():
            font=f_kicker, fill=(212, 175, 105))
     d.text((36, 52), "TUESDAY, 17 NOVEMBER 2026",
            font=f_date, fill=(255, 255, 255))
-    d.text((36, 124), "Six stories that defined the day — as reported",
+    d.text((36, 124), "Six stories that defined the day \u2014 as reported",
            font=f_sub, fill=(190, 200, 220))
 
     # --- story cards: 2 cols x 3 rows ---
@@ -165,7 +165,7 @@ def main():
     # --- footer ---
     f_foot = font(FONT_REG, 17)
     d.text((36, 984),
-           "Sources: Al Jazeera, Reuters, AP, CNN, BBC — as reported on 17 November 2026.",
+           "Sources: Al Jazeera, Reuters, AP, CNN, BBC \u2014 as reported on 17 November 2026.",
            font=f_foot, fill=GREY)
 
     img.save("entry.png", optimize=True)
